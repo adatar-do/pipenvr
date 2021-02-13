@@ -1,0 +1,17 @@
+Package: pipenvr
+Title: Python pipenv package in R
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Daniel E.",
+           family = "de la Rosa",
+           role = c("aut", "cre"),
+           email = "drdsdaniel@gmail.com")
+Description: Can help using pipenv with reticulare R package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    lifecycle
+RdMacros: lifecycle
