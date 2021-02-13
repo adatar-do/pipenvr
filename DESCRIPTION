@@ -15,3 +15,5 @@ RoxygenNote: 7.1.1
 Imports: 
     lifecycle
 RdMacros: lifecycle
+URL: https://github.com/drdsdaniel/pipenvr
+BugReports: https://github.com/drdsdaniel/pipenvr/issues
