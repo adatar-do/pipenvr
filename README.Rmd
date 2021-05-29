@@ -18,39 +18,46 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R build status](https://github.com/drdsdaniel/pipenvr/workflows/R-CMD-check/badge.svg)](https://github.com/drdsdaniel/pipenvr/actions)
+[![CRAN status](https://www.r-pkg.org/badges/version/pipenvr)](https://CRAN.R-project.org/package=pipenvr)
+[![Codecov test coverage](https://codecov.io/gh/drdsdaniel/pipenvr/branch/master/graph/badge.svg)](https://codecov.io/gh/drdsdaniel/pipenvr?branch=master)
 <!-- badges: end -->
 
-The goal of pipenvr is to ...
+The goal of pipenvr is to provide a compatibility layer between Python package `pipenv` and R package `reticulate`.
 
 ## Installation
 
-You can install the released version of pipenvr from [CRAN](https://CRAN.R-project.org) with:
+pipenvr is not yet in CRAN.
+
+<!-- You can install the released version of pipenvr from [CRAN](https://CRAN.R-project.org) with: -->
+
+<!-- ``` r -->
+<!-- install.packages("pipenvr") -->
+<!-- ``` -->
+
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
-install.packages("pipenvr")
+tryCatch(
+  library(remotes),
+  error = function(e){
+    install.packages('remotes')
+  }
+)
+remotes::install_github("drdsdaniel/pipenvr")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+See the package site [Get started]() section.
 
-```{r example}
-library(pipenvr)
-## basic example code
-```
+Para los fines de la función use_virtualenv() puede que el pipenv no tenga la misma estructura. En tal sentido, tomar el código de la función use_virtualenv y hacer que use_pipenv() efectue las mismas acciones.
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
-```
+## Contributing
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+Have a feedback or want to contribute?
 
-You can also embed plots, for example:
+Please take a look at the [contributing guidelines](https://drdsdaniel.github.io/pipenvr/CONTRIBUTING.html) before filing an issue or pull request.
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+Please note that the pipenvr project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

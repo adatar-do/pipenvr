@@ -1,6 +1,6 @@
 Package: pipenvr
 Title: Python pipenv package in R
-Version: 0.0.0.9000
+Version: 0.2.0.9000
 Authors@R: 
     person(given = "Daniel E.",
            family = "de la Rosa",
@@ -13,7 +13,13 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
-    lifecycle
+    lifecycle,
+    reticulate
 RdMacros: lifecycle
 URL: https://github.com/drdsdaniel/pipenvr
 BugReports: https://github.com/drdsdaniel/pipenvr/issues
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
