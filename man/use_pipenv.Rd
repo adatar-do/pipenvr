@@ -3,9 +3,7 @@
 \name{use_pipenv}
 \alias{use_pipenv}
 \title{Use pipenv with reticulate
-If a pipenv environment exists, use it. Otherwise, create a new one.
-Set the RETICULATE_PITHON environment variable to the path of the
-pipenv virtual environment. This process is only done once per project.}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}}
 \usage{
 use_pipenv(args = "")
 }
@@ -13,7 +11,6 @@ use_pipenv(args = "")
 \item{args}{\link{character} Other arguments to pass to \code{pipenv shell {{args}} }.}
 }
 \description{
-Use pipenv with reticulate
 If a pipenv environment exists, use it. Otherwise, create a new one.
 Set the RETICULATE_PITHON environment variable to the path of the
 pipenv virtual environment. This process is only done once per project.

@@ -1,4 +1,6 @@
 #' Use pipenv with reticulate
+#' `r lifecycle::badge('experimental')`
+#' 
 #'  If a pipenv environment exists, use it. Otherwise, create a new one.
 #'  Set the RETICULATE_PITHON environment variable to the path of the
 #'  pipenv virtual environment. This process is only done once per project.
@@ -19,9 +21,9 @@ use_pipenv <- function(args = "") {
     create_pipenv(args)
     python <- get_python_path()
     set_env_var(python)
-    print(paste0("Using pipenv virtual environment at ", python))
+    message(paste0("Using pipenv virtual environment at ", python))
   } else {
-    print("virtual environment already activated.
+    message("virtual environment already activated.
     No action taken to avoid nested environments.")
   }
 }

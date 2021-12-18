@@ -15,25 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-#library(pipenvr)
+library(pipenvr)
 ```
 
-```
-\`\`\`{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, comment = "")
-venv = system("python -m pipenv --python 3.6 --venv", intern = T)
-Sys.setenv(RETICULATE_PYTHON = paste0(venv, "/bin"))
-library('reticulate')
-py_install("numpy")
-\`\`\`
-```
-
-Por el momento este código en el rmarkdown funciona. Pero hay que tener algunas consideraciones:
-
-1. El entorno tiene que haber sido creado con pipenv
-2. La versión de python debe tener una share library: https://github.com/rstudio/reticulate/issues/795
-  Funciona crear un entorno por defecto con reticulate y ver cual version de python está usando y luego utilizar ese en pipenv
-3. Si te da error al hacer render, prueba reiniciando la sesión R y reintentando. A menos que entiendas el mensaje de error.
-
-
-Cuando muevo el comando system a la funcion use_pipenv no funciona, creo que tiene que ver con los tiempos de ejecucion y el scope de las funciones, y el hecho de que los rmd usan su propio wd a la mala.
+> TODO
